@@ -3,7 +3,7 @@ Skin cancer is a prevalent form of cancer that can have serious consequences if 
 
 Our team at Candetect has conduced extensive research in the field of skin cancer detection to develop an innovative and user-friendly web-app. Leveraging the power of machine learning and artificial intelligence, our app is designed to provide reliable and accurate results for the classification of skin lesions as malignant or benign.
 
-##Demo link:-
+Demo link:
 
 https://user-images.githubusercontent.com/101183262/232330443-d7021c41-47e1-41b4-a445-a0b43bfc2e9f.mp4
 
