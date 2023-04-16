@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=Lato&family=Noto+Sans:wght@200;300&family=Poppins:wght@300&display=swap");
+
+/* Add the following CSS to your style.css file */
+
+/* Add the following CSS to your style.css file */
+
+/* Add the following CSS to your style.css file */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .bar {
+    margin-left: 0;
+    justify-content: space-around;
+  }
+
+  .bar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar li {
+    margin: 10px 0;
+  }
+}
+.bar a {
+text-decoration: none;
+color: #000;
+}
+
+.bar a:hover {
+color: #777;
+}
+body {
+  background-color: #000000;
+  margin: 0;
+  font-family: Raleway;
+  color: white;
+}
+
+.head {
+  background-color: #00b4d8;
+}
+header {
+  background-color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.carousel {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.carousel .prev {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.carousel .next {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel img {
+    width: auto;
+    height: 90vh;
+    transform: none;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel img {
+    height: 50vh;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    font-size: 1.2em;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+.about-us {
+  background-color: #00b4d8;
+  padding: 40px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+.about-us h2 {
+  margin-top: 0;
+  font-family: "Lato", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .bar {
+    margin-left: 0;
+    justify-content: space-around;
+  }
+
+  .bar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar li {
+    margin: 10px 0;
+  }
+}
+.bar a {
+text-decoration: none;
+color: #000;
+}
+
+.bar a:hover {
+color: #777;
+}

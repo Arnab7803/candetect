@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# data
+labels = ['Men', 'Women', 'Non-Binary']
+sizes = [20, 50, 30]
+colors = ['blue', 'pink', 'gray']
+explode = (0.05, 0.05, 0.05)
+
+# create 3D axis
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# plot pie chart
+wedges, texts, autotexts = ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, explode=explode, colors=colors)
+
+# set the title of the graph
+ax.set_title('Probability of Skin Cancer by Gender')
+
+# add touch response to pie chart
+def explode_wedge(i):
+    if i == 0:
+        explode = (0.2, 0, 0)
+    elif i == 1:
+        explode = (0, 0.2, 0)
+    elif i == 2:
+        explode = (0, 0, 0.2)
+    else:
+        explode = (0, 0, 0)
+    wedges[i].set_edgecolor('black')
+    wedges[i].set_linewidth(2)
+    wedges[i].set_explode(explode)
+
+for i in range(len(wedges)):
+    wedges[i].set_picker(True)
+    wedges[i].set_facecolor(colors[i])
+    ax.scatter([0], [0], [i], color=colors[i], s=150, marker='o', depthshade=False)
+    ax.text(0, 0, i, labels[i], ha='center', va='center', fontweight='bold', color='white', fontsize=12)
+    autotexts[i].set_fontsize(12)
+    autotexts[i].set_color('white')
+    autotexts[i].set_fontweight('bold')
+    autotexts[i].set_picker(True)
+
+fig.canvas.mpl_connect('pick_event', lambda event: explode_wedge(event.ind[0]))
+
+plt.show()
